@@ -12,7 +12,7 @@ const LAYOUT_FILE = path.join(ROOT, '_layouts', 'default.html');
 const config = {
   title: 'Daily Entry Journal',
   description: 'One commit, every day',
-  author: 'Ayoola Damisile',
+  author: 'Resolute Femi',
   baseurl: process.env.VERCEL_ENV === 'production' ? '' : ''
 };
 

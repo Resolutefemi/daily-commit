@@ -92,9 +92,6 @@ if [ "$MONTH" = "01" ] && [ "$DAY" = "01" ]; then
 fi
 
 BIRTHDAY_MSG=""
-if [ "$MONTH" = "08" ] && [ "$DAY" = "29" ]; then
-  BIRTHDAY_MSG="🎂 **Happy Birthday, Ayoola Damisile!** 🎉 Another trip around the sun — keep building."
-fi
 
 WEEKEND_VIBE=""
 if [ "$DAY_OF_WEEK" = "5" ]; then
@@ -173,7 +170,7 @@ done
 cat > "$CONTENT_DIR/$DATE_STR.md" << EOF
 # Day $DAY_OF_YEAR of $YEAR — $DAY_NAME, $MONTH_NAME $DAY
 
-$GREETING, Ayoola. $STREAK_ICON $STREAK-day streak.
+$GREETING, Resolute. $STREAK_ICON $STREAK-day streak.
 
 > *"$QUOTE"*
 
@@ -300,7 +297,7 @@ cat >> "$CONTENT_DIR/$DATE_STR.md" << EOF
 </nav>
 
 *Daily entry #$BUILD_NUM — $DATE_STR*
-*— [Ayoola Damisile](https://github.com/Ayoola-tech2024)*
+*— [Resolute Femi](https://github.com/Resolutefemi)*
 EOF
 
 echo "✅ Created content for $DATE_STR (Tech: $TECH_YEAR)"
@@ -326,7 +323,7 @@ layout: default
 
 # Daily Entry Journal — $TARGET_YEAR
 
-<span class="hero-subtitle">by **Ayoola Damisile**</span>
+<span class="hero-subtitle">by **Resolute Femi**</span>
 
 $STREAK_ICON **$STREAK-day streak** &middot; 🎯 **$BUILD_NUM / $YEAR_GOAL** entries
 
@@ -501,7 +498,7 @@ $WEEKLY_BUILDS
 
 ---
 
-*— [Ayoola Damisile](https://github.com/Ayoola-tech2024)*
+*— [Resolute Femi](https://github.com/Resolutefemi)*
 EOF
     echo "✅ Weekly summary generated for week $WEEK_NUM"
   fi
@@ -530,7 +527,7 @@ if [ "$MONTH" = "12" ] && [ "$DAY" = "31" ]; then
 
 Thank you for following along. See you next year. 🚀
 
-*— [Ayoola Damisile](https://github.com/Ayoola-tech2024)*
+*— [Resolute Femi](https://github.com/Resolutefemi)*
 EOF
     echo "✅ Year-end recap generated"
   fi
