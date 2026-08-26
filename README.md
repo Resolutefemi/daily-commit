@@ -1,7 +1,21 @@
-# Daily Commit — Femi's build journal
+# Daily Commit — 2026
 
-One commit, every day. Streak starts today.
+A daily entry journal. One commit, every day.
 
-<!-- stats live here; updated automatically by the Daily Entry workflow -->
+✨ **1-day streak** · 🎯 **1 / 300** builds
 
-*First build fires when the workflow runs (or manually: Actions → Daily Entry → Run workflow).*
+## Year Progress
+
+█████████████░░░░░░░ 65.2%
+
+**Days completed:** 238 / 365
+
+## Latest
+
+[View today's entry →](./content/2026-08-26.md)
+
+[View all builds](/)
+
+---
+
+*Next build scheduled for tomorrow.*
