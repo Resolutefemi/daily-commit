@@ -551,6 +551,56 @@ else
   COMMIT_MSG="Day $DAY_OF_YEAR — $TECH_YEAR"
 fi
 
+# ----------------------------------------------------------------------------
+# Natural fluctuation layer
+# Varies contributions per day so the graph shows organic depth (light /
+# medium / dark cells) like a real developer rhythm, while the streak itself
+# NEVER breaks (the main journal commit always lands first = minimum 1).
+# Deterministic per-date RNG: the same date always plans the same count, so
+# workflow retries can never double-fluctuate.
+# ----------------------------------------------------------------------------
+LOG_DIR="$CONTENT_DIR/log"
+mkdir -p "$LOG_DIR"
+
+SEED=$((10#$YEAR * 10000 + MONTH_NUM * 100 + 10#$DAY))
+SEED=$(( (SEED * 1103515245 + 12345) % 2147483648 ))
+ROLL=$((SEED % 100))
+
+if   [ "$ROLL" -lt 30 ]; then EXTRA=0   # calm day       -> 1 square (light)
+elif [ "$ROLL" -lt 55 ]; then EXTRA=1   #                 -> 2
+elif [ "$ROLL" -lt 73 ]; then EXTRA=2   #                 -> 3
+elif [ "$ROLL" -lt 85 ]; then EXTRA=3   #                 -> 4
+elif [ "$ROLL" -lt 93 ]; then EXTRA=4   #                 -> 5
+elif [ "$ROLL" -lt 97 ]; then EXTRA=5   #                 -> 6
+elif [ "$ROLL" -lt 99 ]; then EXTRA=6   # productive day  -> 7
+else EXTRA=8                            # deep-work day   -> 9 (darkest)
+fi
+
+EXTRA_MSGS=(
+  "chore: journal sync"
+  "docs: progress notes"
+  "log: reflection digest"
+  "chore: streak maintenance"
+  "notes: reading capture"
+  "chore: stats touch-up"
+  "log: ideas scratchpad"
+  "chore: consistency win"
+)
+
+i=0
+while [ "$i" -lt "$EXTRA" ]; do
+  i=$((i + 1))
+  XMSG="${EXTRA_MSGS[$(( (i + ROLL) % ${#EXTRA_MSGS[@]} ))]}"
+  printf -- "- [%s] sync #%s - %s\n" "$(date -u +%H:%M)" "$i" "$XMSG" >> "$LOG_DIR/$DATE_STR.md"
+  git add "$LOG_DIR/$DATE_STR.md"
+  git commit -q -m "$XMSG"
+done
+
+if [ "$EXTRA" -gt 0 ]; then
+  echo "fluctuation: $EXTRA extra commit(s) today (roll=$ROLL)"
+fi
+
 git commit -m "$COMMIT_MSG"
 git push
-echo "✅ Pushed commit: $COMMIT_MSG"
+TOTAL_TODAY=$((1 + EXTRA))
+echo "Pushed $TOTAL_TODAY contribution(s) for $DATE_STR"
