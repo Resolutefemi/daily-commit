@@ -3,6 +3,7 @@ name: Daily Entry
 on:
   schedule:
     - cron: '0 6 * * *'
+    - cron: '35 6 * * *'   # fallback pass; skip-guard makes double-run harmless
   workflow_dispatch:
 
 permissions:
