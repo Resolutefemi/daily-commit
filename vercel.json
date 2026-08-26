@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "_site",
+  "framework": null,
+  "github": {
+    "silent": true
+  }
+}

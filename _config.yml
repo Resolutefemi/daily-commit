@@ -1,0 +1,16 @@
+title: Daily Entry Journal
+description: One commit, every day
+author: Resolutefemi
+baseurl: "/daily-commit"
+theme: jekyll-theme-primer
+show_downloads: false
+
+defaults:
+  - scope:
+      path: "content"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
