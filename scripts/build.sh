@@ -552,6 +552,18 @@ else
 fi
 
 # ----------------------------------------------------------------------------
+# Main journal commit — ALWAYS lands first, carrying the day's message.
+# (This ordering is what guarantees the streak minimum of 1; the fluctuation
+# layer below only appends AFTER the journal commit is already secured.)
+# ----------------------------------------------------------------------------
+if git diff --cached --quiet; then
+  echo "Nothing to commit for $DATE_STR — journal already up to date"
+else
+  git commit -m "$COMMIT_MSG"
+  echo "✅ Main journal commit created: $COMMIT_MSG"
+fi
+
+# ----------------------------------------------------------------------------
 # Natural fluctuation layer
 # Varies contributions per day so the graph shows organic depth (light /
 # medium / dark cells) like a real developer rhythm, while the streak itself
@@ -600,7 +612,6 @@ if [ "$EXTRA" -gt 0 ]; then
   echo "fluctuation: $EXTRA extra commit(s) today (roll=$ROLL)"
 fi
 
-git commit -m "$COMMIT_MSG"
 git push
 TOTAL_TODAY=$((1 + EXTRA))
 echo "Pushed $TOTAL_TODAY contribution(s) for $DATE_STR"
