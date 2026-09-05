@@ -6,7 +6,7 @@ layout: default
 
 <span class="hero-subtitle">by **Ayoola Damisile**</span>
 
-💪 **3-day streak** &middot; 🎯 **4 / 300** entries
+🔥 **11-day streak** &middot; 🎯 **11 / 300** entries
 
 ---
 
@@ -14,13 +14,20 @@ layout: default
 | # | Date | Entry |
 |---|---|---|
 | 1 | [2026-08-26](./content/2026-08-26.md) | <span class="title-truncate">Daily entry</span> |
+| 2 | [2026-08-27](./content/2026-08-27.md) | <span class="title-truncate">Daily entry</span> |
+| 3 | [2026-08-28](./content/2026-08-28.md) | <span class="title-truncate">Daily entry</span> |
+| 4 | [2026-08-29](./content/2026-08-29.md) | <span class="title-truncate">Daily entry</span> |
+| 5 | [2026-08-30](./content/2026-08-30.md) | <span class="title-truncate">Daily entry</span> |
+| 6 | [2026-08-31](./content/2026-08-31.md) | <span class="title-truncate">Daily entry</span> |
 
 ## September
 | # | Date | Entry |
 |---|---|---|
-| 1 | [2026-09-02](./content/2026-09-02.md) | <span class="title-truncate">Daily entry</span> |
-| 2 | [2026-09-03](./content/2026-09-03.md) | <span class="title-truncate">Daily entry</span> |
-| 3 | [2026-09-04](./content/2026-09-04.md) | <span class="title-truncate">Daily entry</span> |
+| 1 | [2026-09-01](./content/2026-09-01.md) | <span class="title-truncate">Daily entry</span> |
+| 2 | [2026-09-02](./content/2026-09-02.md) | <span class="title-truncate">Daily entry</span> |
+| 3 | [2026-09-03](./content/2026-09-03.md) | <span class="title-truncate">Daily entry</span> |
+| 4 | [2026-09-04](./content/2026-09-04.md) | <span class="title-truncate">Daily entry</span> |
+| 5 | [2026-09-05](./content/2026-09-05.md) | <span class="title-truncate">Daily entry</span> |
 
 ## Streak Calendar
 <div class="streak-calendar">
@@ -262,13 +269,14 @@ layout: default
 <div class="streak-day" title="2026-08-24"></div>
 <div class="streak-day" title="2026-08-25"></div>
 <div class="streak-day filled" title="2026-08-26"></div>
-<div class="streak-day" title="2026-08-27"></div>
-<div class="streak-day" title="2026-08-28"></div>
-<div class="streak-day" title="2026-08-29"></div>
-<div class="streak-day" title="2026-08-30"></div>
-<div class="streak-day" title="2026-08-31"></div>
-<div class="streak-day" title="2026-09-01"></div>
+<div class="streak-day filled" title="2026-08-27"></div>
+<div class="streak-day filled" title="2026-08-28"></div>
+<div class="streak-day filled" title="2026-08-29"></div>
+<div class="streak-day filled" title="2026-08-30"></div>
+<div class="streak-day filled" title="2026-08-31"></div>
+<div class="streak-day filled" title="2026-09-01"></div>
 <div class="streak-day filled" title="2026-09-02"></div>
 <div class="streak-day filled" title="2026-09-03"></div>
-<div class="streak-day filled today" title="2026-09-04"></div>
+<div class="streak-day filled" title="2026-09-04"></div>
+<div class="streak-day filled today" title="2026-09-05"></div>
 </div>
